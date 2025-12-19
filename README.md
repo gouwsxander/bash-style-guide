@@ -323,7 +323,7 @@ Prefer using a command line tools builtin method of reading a file instead of
 passing in stdin.  This is where we make the inference that, if a program says
 it can read a file passed by name, it's probably more performant to do that.
 
-- [Your Using `cat` Wrong](https://www.youtube.com/watch?v=vAK55aiRLeY)
+- [You’re Using `cat` Wrong](https://www.youtube.com/watch?v=vAK55aiRLeY)
 - [UUOC](http://www.smallo.ruhr.de/award.html)
 
 ---
