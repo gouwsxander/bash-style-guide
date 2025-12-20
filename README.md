@@ -5,7 +5,7 @@ This guide outlines how to write bash scripts with a style that makes them safe
 and predictable.  This guide is written by [Dave Eddy](https://daveeddy.com) as
 part of the YSAP (You Suck at Programming) series [ysap.sh](https://ysap.sh) and
 is the working document for how I approach bash scripting when it comes to
-style, design, and best-practices.
+style, design, and best practices.
 
 Preface
 -------
@@ -293,8 +293,8 @@ External Commands
 
 ### GNU userland tools
 
-The whole world doesn't run on GNU or on Linux; avoid GNU specific options
 when forking external commands like `awk`, `sed`, `grep`, etc. to be as
+The whole world doesn't run on GNU or on Linux; avoid GNU-specific options
 portable as possible.
 
 When writing bash and using all the powerful tools and builtins bash gives you,
@@ -456,7 +456,7 @@ implications.
 Never.
 
 It opens your code to code injection and makes static analysis impossible.
-Almost every use-case can be solved more safely with arrays, indirect expansion,
+Almost every use case can be solved more safely with arrays, indirect expansion,
 or proper quoting.
 
 ---
