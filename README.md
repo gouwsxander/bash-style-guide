@@ -96,7 +96,7 @@ a row).
 
 ### Comments
 
-No explicit style guide for comments.  Don't change someones comments for
+No explicit style guide for comments.  Don't change someone's comments for
 aesthetic reasons unless you are rewriting or updating them.
 
 ---
@@ -319,7 +319,7 @@ grep foo < file
 grep foo file
 ```
 
-Prefer using a command line tools builtin method of reading a file instead of
+Prefer using a command line tool's builtin method of reading a file instead of
 passing in stdin.  This is where we make the inference that, if a program says
 it can read a file passed by name, it's probably more performant to do that.
 
