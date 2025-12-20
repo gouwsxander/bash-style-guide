@@ -211,7 +211,7 @@ nonumbers=${name//[0-9]/}
 
 ### Listing Files
 
-Do not [parse ls(1)](http://mywiki.wooledge.org/ParsingLs), instead use
+Do not [parse ls(1)](http://mywiki.wooledge.org/ParsingLs); instead, use
 bash builtin functions to loop through files
 
 ``` bash
@@ -235,7 +235,7 @@ full path of the executing program, you should rethink your software design.
 
 See [BashFAQ028](http://mywiki.wooledge.org/BashFAQ/028) for more information
 
-For a case study on `__dirname` in multiple languages see my blog post
+For a case study on `__dirname` in multiple languages, see my blog post
 
 [Dirname Case
 Study](http://daveeddy.com/2015/04/13/dirname-case-study-for-bash-and-node/)
@@ -259,7 +259,7 @@ for module in "${modules[@]}"; do
 done
 ```
 
-Of course, in this example it may be better expressed as:
+Of course, in this example, it may be better expressed as:
 
 ``` bash
 npm install -g "${modules[@]}"
@@ -364,7 +364,7 @@ bar=$foo  # no quotes needed - variable assignment doesn't word-split
 ```
 
 1. The only exception to this rule is if the code or bash controls the variable
-for the duration of its lifetime.  For example code like this:
+for the duration of its lifetime.  For example, code like this:
 
 ``` bash
 printf_date_supported=false
@@ -385,7 +385,7 @@ or command.
 Also, variables like `$$`, `$?`, `$#`, etc. don't required quotes because they
 will never contain spaces, tabs, or newlines.
 
-When in doubt; [quote all expansions](http://mywiki.wooledge.org/Quotes).
+When in doubt, [quote all expansions](http://mywiki.wooledge.org/Quotes).
 
 - [YSAP021](https://ysap.sh/v/21/)
 
@@ -431,7 +431,7 @@ errors for `cd` (or commands like it) and exit or break if they are present.
 ``` bash
 # wrong
 cd /some/path # this could fail
-rm file       # if cd fails where am I? what am I deleting?
+rm file       # if cd fails, where am I? what am I deleting?
 
 # right
 cd /some/path || exit
@@ -493,7 +493,7 @@ echo 2  spaces
 echo 3   spaces
 ```
 
-The extra spaces are effectively ignored here and only 2 arguments are passed
+The extra spaces are effectively ignored here, and only 2 arguments are passed
 to the `echo` command in all 3 invocations.
 
 If the variable was quoted instead:
@@ -516,7 +516,7 @@ The variable `$f` is expanded but doesn't get split at all by bash, so it is
 passed as a single string (with spaces) to the `echo` command in all 3
 invocations.
 
-Note that, for the most part `$f` is the same as `${f}` and `"$f"` is the same
+Note that, for the most part, `$f` is the same as `${f}` and `"$f"` is the same
 as `"${f}"`.  The curly braces should only be used to ensure the variable name
 is expanded properly.  For example:
 
@@ -532,7 +532,7 @@ expanded.
 
 ### Abusing for-loops when while would work better
 
-`for` loops are great for iteration over arguments, or arrays.  Newline
+`for` loops are great for iteration over arguments or arrays.  Newline
 separated data is best left to a `while read -r ...` loop.
 
 ``` bash
@@ -553,8 +553,8 @@ contain spaces or tabs.
 streaming fashion.
 2. If the first field of that file contained spaces or tabs, the for loop would
 break on that as well as newlines.
-3. This only works *because* `$users` is unquoted in the `for` loop - if
-variable expansion only works for your purposes while unquoted this is a good
+3. This only works *because* `$users` is unquoted in the `for` loop; if
+variable expansion only works for your purposes while unquoted, this is a good
 sign that something isn't implemented correctly.
 
 To rewrite this:
@@ -566,7 +566,7 @@ done < /etc/passwd
 ```
 
 This will read the file in a streaming fashion, not pulling it all into memory,
-and will break on colons extracting the first field and discarding (storing as
+and will break on colons, extracting the first field and discarding (storing as
 the variable `_`) the rest - using nothing but bash builtin commands.
 
 - [YSAP038](https://ysap.sh/v/38/)
