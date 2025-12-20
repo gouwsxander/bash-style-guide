@@ -11,8 +11,8 @@ Preface
 -------
 
 This guide will try to be as objective as possible, providing reasoning for why
-certain decisions were made.  For choices that are purely aesthetic (and may
-not be universally agreeable) they will exist in the `Aesthetics` section
+certain decisions were made.  Choices that are purely aesthetic (and may
+not be universally agreeable) will exist in the `Aesthetics` section
 below.
 
 Though good style alone won't ensure that your scripts are free from error, it
@@ -391,7 +391,7 @@ When in doubt; [quote all expansions](http://mywiki.wooledge.org/Quotes).
 
 ### Variable Declaration
 
-Avoid uppercase variable names unless they 1. are constants or 2. are exported
+Avoid uppercase variable names unless they are constants or are exported
 to the environment using `export`.  Don't use `let` or `readonly` to create
 variables.  `declare` should *only* be used for associative arrays.  `local`
 should *always* be used in functions.
