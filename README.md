@@ -104,7 +104,7 @@ aesthetic reasons unless you are rewriting or updating them.
 Bashisms
 --------
 
-This style guide is for bash.  This means when given the choice, always prefer
+This style guide is for bash.  This means that, when given the choice, always prefer
 bash builtins or keywords instead of external commands or `sh(1)` syntax.
 
 ### `test(1)`
@@ -212,7 +212,7 @@ nonumbers=${name//[0-9]/}
 ### Listing Files
 
 Do not [parse ls(1)](http://mywiki.wooledge.org/ParsingLs), instead use
-bash builtin functions to loop files
+bash builtin functions to loop through files
 
 ``` bash
 # very wrong, potentially unsafe
