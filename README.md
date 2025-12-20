@@ -91,7 +91,7 @@ fi
 
 ### Spacing
 
-No more than 2 consecutive newline characters (ie. no more than 1 blank line in
+No more than 2 consecutive newline characters (i.e., no more than 1 blank line in
 a row).
 
 ### Comments
@@ -293,8 +293,8 @@ External Commands
 
 ### GNU userland tools
 
-when forking external commands like `awk`, `sed`, `grep`, etc. to be as
 The whole world doesn't run on GNU or on Linux; avoid GNU-specific options
+when forking external commands like `awk`, `sed`, `grep`, etc., to be as
 portable as possible.
 
 When writing bash and using all the powerful tools and builtins bash gives you,
@@ -418,7 +418,7 @@ Bash is not always located at `/bin/bash`, so use this line:
 #!/usr/bin/env bash
 ```
 
-Unless you’re intentionally targeting a specific environment (e.g. `/bin/bash`
+Unless you’re intentionally targeting a specific environment (e.g., `/bin/bash`
 on Linux servers with restricted PATHs).
 
 - [Shebangs are Weird](https://www.youtube.com/watch?v=aoHMiCzqCNw)
